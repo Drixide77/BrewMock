@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		727E5973235EDC7400ADC69A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727E5972235EDC7400ADC69A /* AppDelegate.swift */; };
 		727E5975235EDC7400ADC69A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727E5974235EDC7400ADC69A /* SceneDelegate.swift */; };
-		727E5977235EDC7400ADC69A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727E5976235EDC7400ADC69A /* ViewController.swift */; };
+		727E5977235EDC7400ADC69A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727E5976235EDC7400ADC69A /* MainViewController.swift */; };
 		727E597A235EDC7400ADC69A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 727E5978235EDC7400ADC69A /* Main.storyboard */; };
 		727E597C235EDC7600ADC69A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 727E597B235EDC7600ADC69A /* Assets.xcassets */; };
 		727E597F235EDC7600ADC69A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 727E597D235EDC7600ADC69A /* LaunchScreen.storyboard */; };
@@ -30,7 +30,7 @@
 		727E596F235EDC7400ADC69A /* BrewMock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrewMock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		727E5972235EDC7400ADC69A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		727E5974235EDC7400ADC69A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		727E5976235EDC7400ADC69A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		727E5976235EDC7400ADC69A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		727E5979235EDC7400ADC69A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		727E597B235EDC7600ADC69A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		727E597E235EDC7600ADC69A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -81,7 +81,7 @@
 			children = (
 				727E5972235EDC7400ADC69A /* AppDelegate.swift */,
 				727E5974235EDC7400ADC69A /* SceneDelegate.swift */,
-				727E5976235EDC7400ADC69A /* ViewController.swift */,
+				727E5976235EDC7400ADC69A /* MainViewController.swift */,
 				727E5978235EDC7400ADC69A /* Main.storyboard */,
 				727E597B235EDC7600ADC69A /* Assets.xcassets */,
 				727E597D235EDC7600ADC69A /* LaunchScreen.storyboard */,
@@ -200,7 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				727E5977235EDC7400ADC69A /* ViewController.swift in Sources */,
+				727E5977235EDC7400ADC69A /* MainViewController.swift in Sources */,
 				727E5973235EDC7400ADC69A /* AppDelegate.swift in Sources */,
 				727E5975235EDC7400ADC69A /* SceneDelegate.swift in Sources */,
 			);
@@ -362,14 +362,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MQK99F776N;
 				INFOPLIST_FILE = BrewMock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.adriaabella.brewmock.BrewMock;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brewmock.BrewMock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -379,14 +382,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MQK99F776N;
 				INFOPLIST_FILE = BrewMock/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.adriaabella.brewmock.BrewMock;
+				PRODUCT_BUNDLE_IDENTIFIER = com.brewmock.BrewMock;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
