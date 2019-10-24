@@ -2,7 +2,7 @@
 //  BrewMockTests.swift
 //  BrewMockTests
 //
-//  Created by Josep Lorente on 22/10/2019.
+//  Created by Adrià Abella on 22/10/2019.
 //  Copyright © 2019 AdriaAbella. All rights reserved.
 //
 

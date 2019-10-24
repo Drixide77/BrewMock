@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  BrewMock
 //
-//  Created by Josep Lorente on 22/10/2019.
+//  Created by Adrià Abella on 22/10/2019.
 //  Copyright © 2019 AdriaAbella. All rights reserved.
 //
 
@@ -11,8 +11,12 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    public var dataModel: DataModel
 
-
+    override init() {
+        self.dataModel = DataModel()
+    }
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true

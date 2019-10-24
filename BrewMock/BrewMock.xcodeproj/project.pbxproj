@@ -14,6 +14,7 @@
 		727E597C235EDC7600ADC69A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 727E597B235EDC7600ADC69A /* Assets.xcassets */; };
 		727E597F235EDC7600ADC69A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 727E597D235EDC7600ADC69A /* LaunchScreen.storyboard */; };
 		727E598A235EDC7600ADC69A /* BrewMockTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727E5989235EDC7600ADC69A /* BrewMockTests.swift */; };
+		72A1149423618B4F00C214B1 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72A1149323618B4E00C214B1 /* DataModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		727E5985235EDC7600ADC69A /* BrewMockTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrewMockTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		727E5989235EDC7600ADC69A /* BrewMockTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrewMockTests.swift; sourceTree = "<group>"; };
 		727E598B235EDC7600ADC69A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		72A1149323618B4E00C214B1 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				727E597B235EDC7600ADC69A /* Assets.xcassets */,
 				727E597D235EDC7600ADC69A /* LaunchScreen.storyboard */,
 				727E5980235EDC7600ADC69A /* Info.plist */,
+				72A1149323618B4E00C214B1 /* DataModel.swift */,
 			);
 			path = BrewMock;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 			files = (
 				727E5977235EDC7400ADC69A /* MainViewController.swift in Sources */,
 				727E5973235EDC7400ADC69A /* AppDelegate.swift in Sources */,
+				72A1149423618B4F00C214B1 /* DataModel.swift in Sources */,
 				727E5975235EDC7400ADC69A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
