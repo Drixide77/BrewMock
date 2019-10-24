@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  BrewMock
 //
 //  Created by Adrià Abella on 22/10/2019.

@@ -11,14 +11,13 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    public var dataModel: DataModel
-
-    override init() {
-        self.dataModel = DataModel()
-    }
+    public var dataModel: DataModel?
+    
+    var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        self.dataModel = DataModel()
         return true
     }
 
