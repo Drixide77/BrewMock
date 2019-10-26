@@ -8,40 +8,61 @@
 
 import Foundation
 
+public struct Beer : Codable {
+    public let name: String?
+    public let tagline: String?
+    public let description: String?
+    public let image_url: String?
+    public let abv: Float?
+}
+
 class DataModel {
     
-    private var queryCache : [String: String] = [:]
+    private var queryCache : [String: String] = [:] // Could be optimized using an LRU cache, but might be overkill for this use case
+    
+    public var currentData : Array<Beer> = []
     
     init() {
         loadToUserDefaults()
     }
     
-    public func searchBeersForFood(_ searchTerms: String, completionHandler: (_ result: String) -> Void) {
+    public func searchBeersForFood(_ searchTerms: String, completionHandler: (() -> Void)?) {
         if let result: String = queryCache[searchTerms] {
             print("Element found!")
-            //completionHandler(result)
+            let data = result.data(using: .utf8)
+            currentData = try! JSONDecoder().decode(Array<Beer>.self, from: data!)
+            completionHandler?()
         } else {
-            print("Query")
+            print("Query necessary")
             requestBeersForFood(searchTerms, onComplete: completionHandler)
         }
     }
     
     // Example!
-    private func requestBeersForFood(_ searchTerms: String, onComplete: (_ result: String) -> Void) {
-        //let params = ["username":"john", "password":"123456"] as Dictionary<String, String>
+    private func requestBeersForFood(_ searchTerms: String, onComplete: (() -> Void)?) {
         let foodParams: String = searchTerms.replacingOccurrences(of: " ", with: "_").lowercased()
         var request = URLRequest(url: URL(string: "https://api.punkapi.com/v2/beers?food="+foodParams)!)
         request.httpMethod = "GET"
-        //request.httpBody = try? JSONSerialization.data(withJSONObject: params, options: [])
         request.addValue("application/json", forHTTPHeaderField: "Content-Type")
         let session = URLSession.shared
         let task = session.dataTask(with: request, completionHandler: { data, response, error -> Void in
-            //print(response!)
             do {
-                let json = try JSONSerialization.jsonObject(with: data!) as! Array<Dictionary<String, AnyObject>>
-                print(json)
+                if let empty = try JSONSerialization.jsonObject(with: data!) as? NSDictionary {
+                    if empty.count == 0 {
+                        self.currentData = Array<Beer>()
+                    }
+                    else
+                    {
+                        print(empty)
+                    }
+                }
+                if let json = try JSONSerialization.jsonObject(with: data!) as? Array<Beer> {
+                    print(json)
+                    self.currentData = json
+                }
                 self.queryCache[searchTerms] = String(data: data!, encoding: String.Encoding.utf8)
                 self.saveToUserDefaults()
+                onComplete?()
                 print("A-OK")
             } catch {
                 print("error")

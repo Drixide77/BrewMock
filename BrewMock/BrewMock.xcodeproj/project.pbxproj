@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7225A7882364B30800844C95 /* BeerTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7225A7872364B30700844C95 /* BeerTableViewCell.swift */; };
 		727E5973235EDC7400ADC69A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727E5972235EDC7400ADC69A /* AppDelegate.swift */; };
 		727E5975235EDC7400ADC69A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727E5974235EDC7400ADC69A /* SceneDelegate.swift */; };
 		727E5977235EDC7400ADC69A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727E5976235EDC7400ADC69A /* MainViewController.swift */; };
@@ -28,6 +29,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7225A7872364B30700844C95 /* BeerTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BeerTableViewCell.swift; sourceTree = "<group>"; };
 		727E596F235EDC7400ADC69A /* BrewMock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrewMock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		727E5972235EDC7400ADC69A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		727E5974235EDC7400ADC69A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		727E5971235EDC7400ADC69A /* BrewMock */ = {
 			isa = PBXGroup;
 			children = (
+				7225A7872364B30700844C95 /* BeerTableViewCell.swift */,
 				727E5972235EDC7400ADC69A /* AppDelegate.swift */,
 				727E5974235EDC7400ADC69A /* SceneDelegate.swift */,
 				727E5976235EDC7400ADC69A /* MainViewController.swift */,
@@ -207,6 +210,7 @@
 				727E5973235EDC7400ADC69A /* AppDelegate.swift in Sources */,
 				72A1149423618B4F00C214B1 /* DataModel.swift in Sources */,
 				727E5975235EDC7400ADC69A /* SceneDelegate.swift in Sources */,
+				7225A7882364B30800844C95 /* BeerTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
