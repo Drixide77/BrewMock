@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		724F0BAB2361E8EB00FE194A /* LRUCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724F0BAA2361E8EB00FE194A /* LRUCache.swift */; };
-		724F0BAD2361E98800FE194A /* LinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 724F0BAC2361E98800FE194A /* LinkedList.swift */; };
 		727E5973235EDC7400ADC69A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727E5972235EDC7400ADC69A /* AppDelegate.swift */; };
 		727E5975235EDC7400ADC69A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727E5974235EDC7400ADC69A /* SceneDelegate.swift */; };
 		727E5977235EDC7400ADC69A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 727E5976235EDC7400ADC69A /* MainViewController.swift */; };
@@ -30,8 +28,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		724F0BAA2361E8EB00FE194A /* LRUCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LRUCache.swift; sourceTree = "<group>"; };
-		724F0BAC2361E98800FE194A /* LinkedList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinkedList.swift; sourceTree = "<group>"; };
 		727E596F235EDC7400ADC69A /* BrewMock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrewMock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		727E5972235EDC7400ADC69A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		727E5974235EDC7400ADC69A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -93,8 +89,6 @@
 				727E597D235EDC7600ADC69A /* LaunchScreen.storyboard */,
 				727E5980235EDC7600ADC69A /* Info.plist */,
 				72A1149323618B4E00C214B1 /* DataModel.swift */,
-				724F0BAA2361E8EB00FE194A /* LRUCache.swift */,
-				724F0BAC2361E98800FE194A /* LinkedList.swift */,
 			);
 			path = BrewMock;
 			sourceTree = "<group>";
@@ -209,12 +203,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				724F0BAD2361E98800FE194A /* LinkedList.swift in Sources */,
 				727E5977235EDC7400ADC69A /* MainViewController.swift in Sources */,
 				727E5973235EDC7400ADC69A /* AppDelegate.swift in Sources */,
 				72A1149423618B4F00C214B1 /* DataModel.swift in Sources */,
 				727E5975235EDC7400ADC69A /* SceneDelegate.swift in Sources */,
-				724F0BAB2361E8EB00FE194A /* LRUCache.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

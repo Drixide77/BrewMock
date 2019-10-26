@@ -19,11 +19,14 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        print("AAHHG")
         dataModel = (UIApplication.shared.delegate as! AppDelegate).dataModel
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        print("AAHHG")
+        dataModel = (UIApplication.shared.delegate as! AppDelegate).dataModel
     }
     
     override func viewDidLoad() {
@@ -48,6 +51,9 @@ class MainViewController: UIViewController, UITextFieldDelegate {
     func searchBeersForFood(_ searchString: String, _ ascendingABV: Bool) {
         // TODO
         print("searchBeersForFood "+searchString+" "+String(ascendingABV))
+        dataModel?.searchBeersForFood(searchString, completionHandler: { (result: String) -> Void in
+            print("Query completed!: "+result)
+        });
     }
     
 }
