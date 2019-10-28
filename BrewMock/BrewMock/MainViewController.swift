@@ -20,7 +20,7 @@ class MainViewController: UIViewController, UITextFieldDelegate, UITableViewDele
     
     var dataModel: DataModel?
     
-    // -- UIViewController
+    // MARK: UIViewController
     
     override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?) {
         super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
@@ -46,7 +46,7 @@ class MainViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         tableView.reloadData()
     }
     
-    // -- UITextFieldDelegate
+    // MARK: UITextFieldDelegate
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if let search = textField.text {
@@ -58,7 +58,7 @@ class MainViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         return false
     }
     
-    // -- UITableViewDelegate, UITableViewDataSource
+    // MARK: UITableViewDelegate, UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataModel?.currentData.count ?? 0
@@ -82,10 +82,10 @@ class MainViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         return 170;
     }
     
-    // -- ViewModel
+    // MARK: ViewModel
     
     func searchBeersForFood(_ searchString: String, _ ascendingABV: Bool) {
-        // TODO
+        // TODO: Improve input filtering
         print("searchBeersForFood "+searchString+" "+String(ascendingABV))
         if searchString == "" { return }
         dataModel?.searchBeersForFood(searchString, completionHandler: updateBeersList)
@@ -95,6 +95,8 @@ class MainViewController: UIViewController, UITextFieldDelegate, UITableViewDele
         DispatchQueue.global(qos: .userInitiated).async {
             DispatchQueue.main.async {
                 print("Reload table")
+                // TODO: More efficient sort
+                // TODO: Pre-sort the current list (?)
                 self.dataModel?.currentData = (self.dataModel?.currentData.sorted(by: self.beerSort))!
                 self.tableView.reloadData()
                 if self.tableView.numberOfRows(inSection: 0) > 0 {

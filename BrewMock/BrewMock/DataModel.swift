@@ -17,8 +17,8 @@ public struct Beer : Codable {
 }
 
 class DataModel {
-    
-    private var queryCache : [String: String] = [:] // Could be optimized using an LRU cache, but might be overkill for this use case
+    // TODO: Cache could be optimized using an LRU cache (but might be overkill for this use case?)
+    private var queryCache : [String: String] = [:]
     
     public var currentData : Array<Beer> = []
     
@@ -38,7 +38,6 @@ class DataModel {
         }
     }
     
-    // Example!
     private func requestBeersForFood(_ searchTerms: String, onComplete: (() -> Void)?) {
         let foodParams: String = searchTerms.replacingOccurrences(of: " ", with: "_").lowercased()
         var request = URLRequest(url: URL(string: "https://api.punkapi.com/v2/beers?food="+foodParams)!)
@@ -81,6 +80,8 @@ class DataModel {
     }
 
 }
+
+// MARK: UserDefaults extension
 
 extension UserDefaults {
     func object<T: Codable>(_ type: T.Type, with key: String, usingDecoder decoder: JSONDecoder = JSONDecoder()) -> T? {
